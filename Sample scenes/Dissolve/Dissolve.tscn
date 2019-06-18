@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Dissolve.shader" type="Shader" id=1]
+[ext_resource path="res://Paper-Sheet-PNG.png" type="Texture" id=2]
+[ext_resource path="res://Paper-Sheet-PNG.gd" type="Script" id=3]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 1 )
+shader_param/OCTAVES = 6
+shader_param/ash = Color( 0, 0, 0, 1 )
+shader_param/fire = Color( 1, 0.607843, 0, 1 )
+shader_param/start_time = 1e+008
+shader_param/duration = 1.0
+
+[node name="Dissolve" type="Node2D"]
+
+[node name="Paper" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 513.83, 302.246 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
