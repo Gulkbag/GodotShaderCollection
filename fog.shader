@@ -22,7 +22,7 @@ float noise(vec2 coord){
 	vec2 cubic = f * f * (3.0 - 2.0 * f);
 
 	//evil geometry maths, ask your math teacher about perlin noise or ready this https://thebookofshaders.com/13/
-	return mix(a, b, cubic.x) + (c - a) * cubic.y * (1.0 - cubic.x) + (d - b) * cubic.x * cubic.y;
+	return mix(a, b, cubic.x) + (c - a) * cubic.y * (1.0 - cubic.x) + (d - b) * cubic.x * cubic.y; //Excuse moi, what the fuck??
 }
 
 //Fractal Brownian Motion function, like a fractal generates a noise texture with infinite detail (isn't infinite but by the number of octaves because infinite recursion is, well, a bad thing)
